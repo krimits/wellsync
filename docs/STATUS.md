@@ -1,7 +1,8 @@
 # WellSync — Session Status
 
-**Τελευταία ενημέρωση**: 2026-02-24 (context saved end of session 4)
-**Φάση εργασίας**: Φ4 ΣΕ ΕΞΕΛΙΞΗ — backend skeleton + models + auth DONE, Tasks #4-12 pending
+**Τελευταία ενημέρωση**: 2026-02-24 (session 5 — GitHub pushed, context saved)
+**Φάση εργασίας**: Φ4 ΣΕ ΕΞΕΛΙΞΗ — GitHub repo live, Tasks #4-12 pending
+**GitHub**: https://github.com/krimits/wellsync
 
 ## Φ4 Progress (2026-02-24)
 

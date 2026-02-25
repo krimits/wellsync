@@ -1,25 +1,26 @@
 # WellSync — Session Status
 
-**Τελευταία ενημέρωση**: 2026-02-24 (session 5 — GitHub pushed, context saved)
-**Φάση εργασίας**: Φ4 ΣΕ ΕΞΕΛΙΞΗ — GitHub repo live, Tasks #4-12 pending
+**Τελευταία ενημέρωση**: 2026-02-25 (session 6 — Tasks #3-12 DONE, pushed)
+**Φάση εργασίας**: Φ4 ΣΕ ΕΞΕΛΙΞΗ — Backend + Frontend complete, Docker fix applied
 **GitHub**: https://github.com/krimits/wellsync
 
-## Φ4 Progress (2026-02-24)
+## Φ4 Progress (2026-02-25)
 
 | Task | Status | Agent |
 |------|--------|-------|
-| #1 Git repo + skeleton | DONE | team-lead |
-| #2 Database models | IN PROGRESS | architect |
-| #3 Auth (JWT) | PENDING | — |
-| #4 CheckIn + ML | PENDING | — |
-| #5 Workout/Meal logs | PENDING | — |
-| #6 Personalizer + Insights | PENDING | — |
-| #7 Event system | PENDING | — |
-| #8 Agent handlers | PENDING | — |
-| #9 Scheduler | PENDING | — |
-| #10 Recommendations | PENDING | — |
-| #11 React frontend | PENDING | — |
-| #12 Seed + README | PENDING | — |
+| #1 Git repo + skeleton | DONE | — |
+| #2 Database models | DONE | — |
+| #3 Auth (JWT) | DONE | session 6 |
+| #4 CheckIn + ML readiness | DONE | session 6 |
+| #5 Workout/Meal logs | DONE | session 6 |
+| #6 ML Personalizer (Ridge Regression) | DONE | session 6 |
+| #7 Event system integration | DONE | session 6 |
+| #8 Agent handlers (morning/evening/retrain) | DONE | session 6 |
+| #9 APScheduler | DONE | session 6 |
+| #10 Recommendations router | DONE | session 6 |
+| #11 Insights router | DONE | session 6 |
+| #12 React frontend (all pages) | DONE | session 6 |
+| #13 Seed script + README + push | DONE | session 6 |
 
 ---
 

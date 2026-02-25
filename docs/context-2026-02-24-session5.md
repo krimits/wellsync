@@ -50,8 +50,8 @@
 | `migrations/add_knowledge_chunks.sql` | DONE |
 
 ### RAG Knowledge Base
-- `src/knowledge/corpus/` — 27 txt snippets (sleep×7, exercise×9, nutrition×7, stress×5)
-- `src/knowledge/retriever.py` + `ingest.py` — duplicate location (use `backend/knowledge/`)
+- `backend/knowledge/corpus/` — 27 txt snippets (sleep×7, exercise×9, nutrition×7, stress×5)
+- `backend/knowledge/retriever.py` + `ingest.py` — canonical location
 
 ---
 

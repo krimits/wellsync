@@ -17,9 +17,11 @@ WellSync is a 3-service app: PostgreSQL (pgvector), FastAPI backend (port 8000),
 - The VM runs Docker-in-Docker with `fuse-overlayfs` storage driver and `iptables-legacy`. These are configured at `/etc/docker/daemon.json`.
 - Python packages install to `~/.local/bin` (user install). Ensure `$HOME/.local/bin` is on `PATH`.
 - Use `python3` not `python` — only `python3` is available system-wide.
-- The Vite proxy target defaults to `http://localhost:8000` for local dev (via env var `VITE_API_TARGET`). In Docker Compose, the original target `http://backend:8000` is used.
+- The Vite proxy forwards `/api/*` to `http://localhost:8000/api/*` without rewrite. Backend routes include the `/api` prefix. Do NOT add a rewrite rule that strips `/api`.
 - Create `.env` from `.env.example` before running the backend. The `ANTHROPIC_API_KEY` is optional for basic functionality but required for AI recommendation features.
 - After starting PostgreSQL, run `python3 -m backend.create_tables` once to initialize the schema.
+- `passlib[bcrypt]` is incompatible with `bcrypt>=5.0`. The code uses `bcrypt` directly instead of passlib's CryptContext.
+- JWT `sub` claim MUST be a string (not int). Always use `str(user.id)` when encoding and `int(sub)` when decoding.
 
 ### Running tests
 
@@ -35,6 +37,6 @@ No dedicated lint configuration exists yet. Backend follows PEP 8. For quick che
 python3 -m py_compile backend/main.py
 ```
 
-### Codebase state (as of initial setup)
+### Codebase state
 
-The project is in early Φ4 (implementation phase). Core infrastructure (models, events, config, database) exists; routers, agents, and ML modules are stubs awaiting implementation.
+MVP is functional: auth (register/login/JWT), CRUD (checkins/workouts/meals), dashboard with Chart.js trends. Agents and ML modules remain stubs awaiting implementation.

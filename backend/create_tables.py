@@ -11,9 +11,13 @@ from backend.database import engine, Base
 import backend.models  # noqa: F401
 
 
+def create_all_tables() -> None:
+    Base.metadata.create_all(bind=engine)
+
+
 def main() -> None:
     print("Creating all tables...")
-    Base.metadata.create_all(bind=engine)
+    create_all_tables()
     print("Done. Tables created:")
     for table_name in Base.metadata.tables:
         print(f"  - {table_name}")

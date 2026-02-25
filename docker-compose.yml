@@ -20,11 +20,12 @@ services:
       SECRET_KEY: dev-secret-change-in-prod
       ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY}
       AGENT_LOOP_INTERVAL_HOURS: 1
+      ML_MODELS_DIR: /workspace/ml_models
     depends_on:
       - db
     volumes:
-      - ./backend:/app
-      - ml_models:/app/ml_models
+      - ./backend:/workspace/backend
+      - ml_models:/workspace/ml_models
 
   frontend:
     build: ./frontend

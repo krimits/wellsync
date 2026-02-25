@@ -8,7 +8,7 @@
 --   psql $DATABASE_URL -f migrations/add_knowledge_chunks.sql
 --
 -- After this migration, run the ingestion script:
---   python -m src.knowledge.ingest
+--   python -m backend.knowledge.ingest
 
 -- Enable the pgvector extension (idempotent)
 CREATE EXTENSION IF NOT EXISTS vector;

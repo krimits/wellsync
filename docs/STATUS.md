@@ -130,9 +130,9 @@
 4. **Agent 4** τελευταίος (μετά Agent 2+3)
 5. **Agent 0** — final integration QA + `docker compose up --build`
 - **[2026-02-23] RAG αρχεία έτοιμα για Φ4:**
-  - `src/knowledge/retriever.py` — WellnessRetriever class (pgvector cosine search)
-  - `src/knowledge/ingest.py` — one-time corpus ingestion script
-  - `src/knowledge/corpus/*.txt` — 27 curated wellness snippets (sleep×7, exercise×9, nutrition×7, stress×5)
+  - `backend/knowledge/retriever.py` — WellnessRetriever class (pgvector cosine search)
+  - `backend/knowledge/ingest.py` — one-time corpus ingestion script
+  - `backend/knowledge/corpus/*.txt` — 27 curated wellness snippets (sleep×7, exercise×9, nutrition×7, stress×5)
   - `migrations/add_knowledge_chunks.sql` — pgvector extension + table + ivfflat index
   - docker-compose.yml: αλλαγή image σε `pgvector/pgvector:pg16` (1 γραμμή)
   - requirements.txt: `sentence-transformers>=2.2.0`, `pgvector>=0.2.0`
@@ -180,9 +180,9 @@
 | `docs/context-2026-02-21.md` | Context συνεδρίας 2026-02-21 (Φ1 review + Φ2 speaker notes) |
 | `docs/context-2026-02-23.md` | Context συνεδρίας 2026-02-23 session 2 (RAG integration) |
 | `docs/context-2026-02-23-session3.md` | Context συνεδρίας 2026-02-23 session 3 (Φ1+Φ2 RAG sync, Agent 0 Team Leader) |
-| `src/knowledge/retriever.py` | WellnessRetriever — pgvector cosine similarity RAG |
-| `src/knowledge/ingest.py` | One-time corpus ingestion script |
-| `src/knowledge/corpus/*.txt` | 27 curated wellness guidelines (sleep/exercise/nutrition/stress) |
+| `backend/knowledge/retriever.py` | WellnessRetriever — pgvector cosine similarity RAG |
+| `backend/knowledge/ingest.py` | One-time corpus ingestion script |
+| `backend/knowledge/corpus/*.txt` | 27 curated wellness guidelines (sleep/exercise/nutrition/stress) |
 | `migrations/add_knowledge_chunks.sql` | pgvector extension + knowledge_chunks table migration |
 | `docs/STATUS.md` | Αυτό το αρχείο |
 

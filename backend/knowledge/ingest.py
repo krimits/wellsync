@@ -2,7 +2,7 @@
 One-time ingestion script: loads corpus/*.txt → embeds → inserts into knowledge_chunks.
 
 Run once after DB migration:
-    python -m src.knowledge.ingest
+    python -m backend.knowledge.ingest
 
 Requirements:
     - DATABASE_URL env variable (or .env file)

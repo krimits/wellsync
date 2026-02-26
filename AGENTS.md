@@ -35,6 +35,11 @@ No dedicated lint configuration exists yet. Backend follows PEP 8. For quick che
 python3 -m py_compile backend/main.py
 ```
 
+### Dependency notes
+
+- `sentence-transformers` pulls in PyTorch (~2 GB). `pip install -r backend/requirements.txt` takes ~2 minutes. This is normal.
+- Always run `export PATH="$HOME/.local/bin:$PATH"` in new shell sessions before using `pytest`, `uvicorn`, or other pip-installed CLI tools.
+
 ### Codebase state (as of initial setup)
 
 The project is in early Φ4 (implementation phase). Core infrastructure (models, events, config, database) exists; routers, agents, and ML modules are stubs awaiting implementation.
